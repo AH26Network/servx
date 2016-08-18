@@ -113,6 +113,8 @@ echo "Downloading SteamCMD Success"
 chmod +x steamcmd.sh
 chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
 ./steamcmd.sh +login anonymous +app_update 258550 validate +quit
+chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
+./steamcmd.sh +login anonymous +app_update 258550 validate +quit
 cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/
 fi
 
