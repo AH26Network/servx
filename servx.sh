@@ -14,6 +14,7 @@ DATE=$(date)
 HOSTNAME=$(hostname)
 IP=$(dig +short myip.opendns.com @resolver1.opendns.com)
 STATUS="ERROR"
+username=$($GAMETOINSTALL_$SRVID)
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -56,7 +57,7 @@ apt-get install screen -y
 # - Create User - 
 if [ $(id -u) -eq 0 ]; then
 	#read -p "Enter username : " username
-	username = $GAMETOINSTALL_$SRVID
+	#$username = $GAMETOINSTALL_$SRVID
 	read  -p "Enter password for $GAMETOINSTALL Server $SRVID : " password
 	egrep "^$username" /etc/passwd >/dev/null
 	if [ $? -eq 0 ]; then
