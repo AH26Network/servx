@@ -60,7 +60,7 @@ apt-get install openjdk-7-jre -y
 echo "Version of Minecraft ? (0 = latest)"
 read MCVS
 # - Create User for Minecraft Server - 
-if [ $(id -u) -eq 0 ]; then
+else if [ $(id -u) -eq 0 ]; then
 	#read -p "Enter username : " username
 	#$username = "$GAMETOINSTALL_$SRVID"
 	echo "minecraftsrv_$SRVID"
