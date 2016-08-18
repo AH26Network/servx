@@ -32,7 +32,7 @@ sleep 1
 
 # - Select Game - 
 echo -e "${GREEN}Current games supported by Servx :"
-echo "Gmod, Rust, Minecraft, Don't Starve Together"
+echo "Minecraft, Gmod, Rust, Don't Starve Together"
 echo -e "${NC} "
 sleep 1
 echo "Enter the full name of the game to install without uppercase and spaces : "
@@ -52,3 +52,16 @@ sleep 1
 apt-get install screen -y
 
 # - Install - 
+# - Minecraft - 
+if [[ "$GAMETOINSTALL" = "minecraft" ]] ; then
+echo "Version of Minecraft ? (0 = latest)"
+read MCVS
+    if [[ "$MCVS" == "0" ]]; then
+        echo "Installing Minecraft Server latest version"
+    elif [[ "$MCVS" != "1.7.10" ]]; then
+        echo "Installing Minecraft Server in $MCVS"
+    else
+        echo "No version found"
+    fi
+fi
+echo Done !
