@@ -59,7 +59,7 @@ echo "Version of Minecraft ? (0 = latest)"
 read MCVS
     if [[ "$MCVS" == "0" ]]; then
         echo "Installing Minecraft Server latest version"
-    elif [[ "$MCVS" != "1.7.10" ]]; then
+    elif [[ "$MCVS" == "1.7.10" ]]; then
         echo "Installing Minecraft Server in $MCVS"
     else
         echo "No version found"
