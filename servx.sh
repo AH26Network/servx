@@ -58,13 +58,13 @@ if [ $(id -u) -eq 0 ]; then
 	#read -p "Enter username : " username
 	#$username = "$GAMETOINSTALL_$SRVID"
 	read  -p "Enter password for $GAMETOINSTALL Server $SRVID : " password
-	egrep "^$GAMETOINSTALL_$SRVID" /etc/passwd >/dev/null
+	egrep "^SRV_$GAMETOINSTALL_$SRVID" /etc/passwd >/dev/null
 	if [ $? -eq 0 ]; then
-		echo "$GAMETOINSTALL_$SRVID exists!"
+		echo "SRV_$GAMETOINSTALL_$SRVID exists!"
 		exit 1
 	else
 		pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
-		useradd -m -p $pass $GAMETOINSTALL_$SRVID
+		useradd -m -p $pass SRV_$GAMETOINSTALL_$SRVID
 		[ $? -eq 0 ] && echo "User has been added to system!" || echo "Failed to add a user!"
 	fi
 else
