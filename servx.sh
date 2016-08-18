@@ -73,6 +73,10 @@ else
 	exit 2
 fi
 
+sleep 1
+echo "test"
+sleep1
+
 # - Install - 
 # - Minecraft - 
 if [[ "$GAMETOINSTALL" = "minecraft" ]] ; then
