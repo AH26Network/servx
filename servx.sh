@@ -54,6 +54,7 @@ apt-get install screen -y
 # - Install - 
 # - Minecraft - 
 if [[ "$GAMETOINSTALL" = "minecraft" ]] ; then
+apt-get install openjdk-7-jre -y
 echo "Version of Minecraft ? (0 = latest)"
 read MCVS
     if [[ "$MCVS" == "0" ]]; then
