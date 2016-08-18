@@ -24,6 +24,6 @@ echo "PropHunt Downloading Success"
    fi
   if [[ "$GMOD_GAMEMODE" == "Murder" ]] ; then
 echo "Downloading Murder ..."
-  wget -O /home/$GAMETOINSTAL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/
+  wget -O /home/$GAMETOINSTAL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/master.zip https://github.com/mechanicalmind/murder/archive/master.zip
   fi
 fi
