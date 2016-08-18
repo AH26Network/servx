@@ -52,7 +52,7 @@ apt-get update
 sleep 1
 apt-get upgrade -y
 sleep 1
-apt-get install screen -y
+apt-get install screen sshpass -y
 apt-get install ia32-libs -y
 apt-get install ia32-libs-gtk -y
 apt-get install lib32gcc1 -y
@@ -118,7 +118,8 @@ tar -xzf steamcmd_linux.tar.gz
 echo "Downloading SteamCMD Success"
 chmod +x steamcmd.sh
 chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
-./steamcmd.sh +login anonymous +app_update 258550 validate +quit
+#./steamcmd.sh +login anonymous +app_update 258550 validate +quit
+sshpass -p $password ssh $GAMETOINSTALL-$SRVID@localhost ./steamcmd.sh +login anonymous +app_update 258550 validate +quit
 cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/
 fi
 
