@@ -47,11 +47,13 @@ echo ""
 
 # - Updatating dedicated server - 
 echo "Updating your dedicated server"
+dpkg --add-architecture i386
 apt-get update
 sleep 1
 apt-get upgrade -y
 sleep 1
 apt-get install screen -y
+apt-get install ia32-libs ia32-libs-gtk -y
 
 # - Create User - 
 if [ $(id -u) -eq 0 ]; then
