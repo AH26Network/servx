@@ -56,15 +56,15 @@ apt-get install screen -y
 # - Create User - 
 if [ $(id -u) -eq 0 ]; then
 	#read -p "Enter username : " username
-	$username = "$GAMETOINSTALL_$SRVID"
+	#$username = "$GAMETOINSTALL_$SRVID"
 	read  -p "Enter password for $GAMETOINSTALL Server $SRVID : " password
-	egrep "^$username" /etc/passwd >/dev/null
+	egrep "^$GAMETOINSTALL_$SRVID" /etc/passwd >/dev/null
 	if [ $? -eq 0 ]; then
-		echo "$username exists!"
+		echo "$GAMETOINSTALL_$SRVID exists!"
 		exit 1
 	else
 		pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
-		useradd -m -p $pass $username
+		useradd -m -p $pass $GAMETOINSTALL_$SRVID
 		[ $? -eq 0 ] && echo "User has been added to system!" || echo "Failed to add a user!"
 	fi
 else
