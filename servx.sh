@@ -71,9 +71,4 @@ read MCVS
         exit
     fi
 fi
-if [[ "$GAMETOINSTALL" = "minecraft" ]] ; then
-elif [[ "$STATUS" == "OK" ]]; then
-echo "Your $GAMETOINSTALL is ready to launch"
-# more...
-fi
 echo Done !
