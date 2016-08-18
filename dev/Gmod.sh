@@ -8,4 +8,8 @@ chmod +x Steamcmd.sh
 echo "Downloading Gmod"
 ./steamcmd.sh +login anonymous +app_update 4020 validate +quit
 echo "Gmod Downloading success"
+read -p "Number of Slots ?" GMOD_SLOTS
+echo -e "${GREEN}Game Mode suported"
+echo -e "Sandbox;DarkRP;Muder;PropHunt;JailBreak"
+read -p "what Game Mode" GMOD_GAMEMODE
 fi
