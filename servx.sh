@@ -96,9 +96,7 @@ read MCVS
     fi
 fi
 if [[ "$GAMETOINSTALL" = "gmod" ]] ; then
-echo "gmod !!!!"
-echo "pastèque"
-echo "licorne"
+echo "Downloading SteamCMD ..."
 fi
 
 # - DONE - 
