@@ -57,6 +57,7 @@ apt-get install screen -y
 if [ $(id -u) -eq 0 ]; then
 	#read -p "Enter username : " username
 	#$username = "$GAMETOINSTALL_$SRVID"
+	echo "SRV_$GAMETOINSTALL_$SRVID"
 	read  -p "Enter password for $GAMETOINSTALL Server $SRVID : " password
 	egrep "^SRV_$GAMETOINSTALL_$SRVID" /etc/passwd >/dev/null
 	if [ $? -eq 0 ]; then
