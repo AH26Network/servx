@@ -97,7 +97,7 @@ read MCVS
 fi
 if [[ "$GAMETOINSTALL" = "gmod" ]] ; then
 echo "gmod !!!!"
-echo "pomme"
+echo "pastèque"
 fi
 
 # - DONE - 
