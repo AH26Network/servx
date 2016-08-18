@@ -53,32 +53,31 @@ apt-get upgrade -y
 sleep 1
 apt-get install screen -y
 
-# - Create User - 
-if [ $(id -u) -eq 0 ]; then
-	#read -p "Enter username : " username
-	#$username = "$GAMETOINSTALL_$SRVID"
-	echo "$GAMETOINSTALL_$SRV_$SRVID"
-	read  -p "Enter password for $GAMETOINSTALL Server $SRVID : " password
-	egrep "^SRV_$GAMETOINSTALL_$SRVID" /etc/passwd >/dev/null
-	if [ $? -eq 0 ]; then
-		echo "SRV_$GAMETOINSTALL_$SRVID exists!"
-		exit 1
-	else
-		pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
-		useradd -m -p $pass SRV_$GAMETOINSTALL_$SRVID
-		[ $? -eq 0 ] && echo "User has been added to system!" || echo "Failed to add a user!"
-	fi
-else
-	echo "Only root may add a user to the system"
-	exit 2
-fi
-
 # - Install - 
 # - Minecraft - 
 if [[ "$GAMETOINSTALL" = "minecraft" ]] ; then
 apt-get install openjdk-7-jre -y
 echo "Version of Minecraft ? (0 = latest)"
 read MCVS
+# - Create User for Minecraft Server - 
+if [ $(id -u) -eq 0 ]; then
+	#read -p "Enter username : " username
+	#$username = "$GAMETOINSTALL_$SRVID"
+	echo "minecraftsrv_$SRVID"
+	read  -p "Enter password for $GAMETOINSTALL Server $SRVID : " password
+	egrep "^minecraftsrv_$SRVID" /etc/passwd >/dev/null
+	if [ $? -eq 0 ]; then
+		echo "minecraftsrv_$SRVID exists!"
+		exit 1
+	else
+		pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
+		useradd -m -p $pass minecraftsrv_$SRVID
+		[ $? -eq 0 ] && echo "User has been added to system!" || echo "Failed to add a user!"
+	fi
+else
+	echo "Only root may add a user to the system"
+	exit 2
+fi
     if [[ "$MCVS" == "0" ]]; then
         echo "Installing Minecraft Server latest version"
         #install step
@@ -86,10 +85,10 @@ read MCVS
     elif [[ "$MCVS" == "1.7.10" ]]; then
         echo "Installing Minecraft Server in $MCVS"
         echo "Downloading Spigot in $MCVS"
-	wget -O /home/$username/ http://www.thetueurcity.com/download/spigot1.7.10.jar
-	chmod +x /home/$username/spigot1.7.10.jar
-	echo screen -h 1024 -dmS $GAMETOINSTALL_$SRVID java -Xms512M -Xmx1024M -jar -XX:ParallelGCThreads=1 craftbukkit.jar >> /home/$username/start.sh
-	chmod +x /home/$username/start.sh
+	wget -O /home/minecraftsrv_$SRVID/ http://www.thetueurcity.com/download/spigot1.7.10.jar
+	chmod +x /home/minecraftsrv_$SRVID/spigot1.7.10.jar
+	echo screen -h 1024 -dmS $GAMETOINSTALL_$SRVID java -Xms512M -Xmx1024M -jar -XX:ParallelGCThreads=1 craftbukkit.jar >> /home/minecraftsrv_$SRVID/start.sh
+	chmod +x /home/minecraftsrv_$SRVID/start.sh
     else
         echo "No version found"
         exit
