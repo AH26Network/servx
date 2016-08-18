@@ -4,7 +4,7 @@ echo "Downloading SteamCMD ..."
     cd /home/$GAMETOINSTAL-$SRVID/
     tar -xvzf steamcmd_linux.tar.gz
 echo "Steam Downloading success"
-    chmod +x Steamcmd.sh
+    chmod +x steamcmd.sh
 echo "Downloading Gmod"
     ./steamcmd.sh +login anonymous +app_update 4020 validate +quit
 echo "Gmod Downloading success"
@@ -15,15 +15,19 @@ echo -e "Sandbox;DarkRP;Muder;PropHunt;JailBreak${NC}"
   if [[ "$GMOD_GAMEMODE" == "darkrp" ]] ; then
 echo "Downloading DarkRP ..."
   wget -O /home/$GAMETOINSTAL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/darkrp.zip https://github.com/FPtje/DarkRP/archive/master.zip
+  unzip master.zip
 echo "DarkRP Downloading success"
   fi
   if [[ "$GMOD_GAMEMODE" == "PropHunt" ]] ; then
 echo "Downloading PropHunt ..."
   wget -O /home/$GAMETOINSTAL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/prop_hunt.zip http://uk2.strategyinformer.com/v2/download/fcdef8af/garrysmod/prop_hunt.zip
+  unzip prop_hunt.zip
 echo "PropHunt Downloading Success"
    fi
   if [[ "$GMOD_GAMEMODE" == "Murder" ]] ; then
 echo "Downloading Murder ..."
   wget -O /home/$GAMETOINSTAL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/murder.zip https://github.com/mechanicalmind/murder/archive/master.zip
+  unzip master.zip
+echo "Murder Downloading Success"  
   fi
 fi
