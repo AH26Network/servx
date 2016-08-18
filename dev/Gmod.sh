@@ -14,7 +14,7 @@ echo -e "Sandbox;DarkRP;Muder;PropHunt;JailBreak${NC}"
   read -p "What Game Mode" GMOD_GAMEMODE
   if [[ "$GMOD_GAMEMODE" == "darkrp" ]] ; then
 echo "Downloading DarkRP ..."
-  wget -O /home/$GAMETOINSTAL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/master.zip https://github.com/FPtje/DarkRP/archive/master.zip
+  wget -O /home/$GAMETOINSTAL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/darkrp.zip https://github.com/FPtje/DarkRP/archive/master.zip
 echo "DarkRP Downloading success"
   fi
   if [[ "$GMOD_GAMEMODE" == "PropHunt" ]] ; then
@@ -24,6 +24,6 @@ echo "PropHunt Downloading Success"
    fi
   if [[ "$GMOD_GAMEMODE" == "Murder" ]] ; then
 echo "Downloading Murder ..."
-  wget -O /home/$GAMETOINSTAL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/master.zip https://github.com/mechanicalmind/murder/archive/master.zip
+  wget -O /home/$GAMETOINSTAL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/murder.zip https://github.com/mechanicalmind/murder/archive/master.zip
   fi
 fi
