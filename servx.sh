@@ -75,7 +75,7 @@ fi
 
 sleep 1
 echo "test"
-sleep1
+sleep 1
 
 # - Install - 
 # - Minecraft - 
