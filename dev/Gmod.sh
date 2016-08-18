@@ -10,6 +10,16 @@ echo "Downloading Gmod"
 echo "Gmod Downloading success"
 read -p "Number of Slots ?" GMOD_SLOTS
 echo -e "${GREEN}Game Mode suported"
-echo -e "Sandbox;DarkRP;Muder;PropHunt;JailBreak"
-read -p "what Game Mode" GMOD_GAMEMODE
+echo -e "Sandbox;DarkRP;Muder;PropHunt;JailBreak${NC}"
+read -p "What Game Mode" GMOD_GAMEMODE
+  if [[ "$GMOD_GAMEMODE" == "darkrp" ]] ; then
+  wget -O
+  echo ...
+  fi
+  if [[ "$GMOD_GAMEMODE" == "murder" ]] ; then
+  
+  fi
+  if [[ "$GMOD_GAMEMODE" == "Sandbox" ]] ; then
+  
+  fi
 fi
