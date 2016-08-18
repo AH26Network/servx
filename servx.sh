@@ -55,8 +55,8 @@ apt-get install screen -y
 
 # - Create User - 
 if [ $(id -u) -eq 0 ]; then
-	read -p "Enter username : " username
-	#$username = $GAMETOINSTALL_$SRVID
+	#read -p "Enter username : " username
+	$username = "$GAMETOINSTALL_$SRVID"
 	read  -p "Enter password for $GAMETOINSTALL Server $SRVID : " password
 	egrep "^$username" /etc/passwd >/dev/null
 	if [ $? -eq 0 ]; then
@@ -81,7 +81,7 @@ read MCVS
     if [[ "$MCVS" == "0" ]]; then
         echo "Installing Minecraft Server latest version"
         #install step
-        STATUS = OK
+        $STATUS = OK
     elif [[ "$MCVS" == "1.7.10" ]]; then
         echo "Installing Minecraft Server in $MCVS"
         echo "Downloading Spigot in $MCVS"
