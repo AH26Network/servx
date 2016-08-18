@@ -32,7 +32,7 @@ sleep 1
 # - Select Game - 
 echo -e "${GREEN}Current games supported by Servx :"
 echo "Gmod, Rust, Minecraft, Don't Starve Together"
-echo "${NC} "
+echo -e "${NC} "
 sleep 1
 echo "Enter the full name of the game to install without uppercase : "
 read GAMETOINSTALL
