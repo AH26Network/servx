@@ -5,7 +5,7 @@
 #  This program is free software developed by Edouard CONNOR for AH26
 #
 
-SERVX_VERSION="1"
+SERVX_VERSION="1.0.0"
 OS=$(uname -s)
 VER=$(uname -r)
 ARCH=$(uname -m)
