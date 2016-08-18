@@ -2,7 +2,7 @@
 # Servx Automated Installation Script
 # =============================================
 #
-#  This program is free software developed by Edouard CONNOR for AH26
+#  This program is free software developed by Edouard CONNOR & Phenix for AH26
 #
 
 SERVX_VERSION="1.0.0"
