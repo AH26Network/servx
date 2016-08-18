@@ -37,3 +37,17 @@ sleep 1
 echo "Enter the full name of the game to install without uppercase : "
 read GAMETOINSTALL
 echo "$GAMETOINSTALL selected !"
+echo "Enter number of the server installation (shouldn't be used by another install)"
+read SRVID
+echo "$GAMETOINSTALL number $SRVID selected !"
+echo ""
+
+# - Updatating dedicated server - 
+echo "Updating your dedicated server"
+apt-get update
+sleep 1
+apt-get upgrade -y
+sleep 1
+apt-get install screen -y
+
+# - Install - 
