@@ -29,6 +29,7 @@ echo "Current date : $DATE"
 echo "Your IP is $IP and your hostname is $HOSTNAME"
 echo ""
 sleep 1
+
 # - Select Game - 
 echo -e "${GREEN}Current games supported by Servx :"
 echo "Gmod, Rust, Minecraft, Don't Starve Together"
