@@ -53,7 +53,13 @@ sleep 1
 apt-get upgrade -y
 sleep 1
 apt-get install screen -y
-apt-get install ia32-libs ia32-libs-gtk -y
+apt-get install ia32-libs -y
+apt-get install ia32-libs-gtk -y
+apt-get install lib32gcc1 -y
+apt-get install net-tools -y
+apt-get install lib32stdc++6 -y
+apt-get install lib32z1 -y
+apt-get install lib32z1-dev -y
 
 # - Create User - 
 if [ $(id -u) -eq 0 ]; then
@@ -111,8 +117,6 @@ cd /home/$GAMETOINSTALL-$SRVID/
 tar -xzf steamcmd_linux.tar.gz
 echo "Downloading SteamCMD Success"
 chmod +x steamcmd.sh
-chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
-./steamcmd.sh +login anonymous +app_update 258550 validate +quit
 chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
 ./steamcmd.sh +login anonymous +app_update 258550 validate +quit
 cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/
