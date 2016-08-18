@@ -53,6 +53,26 @@ apt-get upgrade -y
 sleep 1
 apt-get install screen -y
 
+# - Create User for Minecraft Server - 
+if [ $(id -u) -eq 0 ]; then
+	#read -p "Enter username : " username
+	#$username = "$GAMETOINSTALL_$SRVID"
+	echo "$GAMETOINSTALL-$SRVID"
+	read  -p "Enter password for $GAMETOINSTALL Server $SRVID : " password
+	egrep "^$GAMETOINSTALL-$SRVID" /etc/passwd >/dev/null
+	if [ $? -eq 0 ]; then
+		echo "$GAMETOINSTALL-$SRVID exists!"
+		exit 1
+	else
+		pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
+		useradd -m -p $pass $GAMETOINSTALL-$SRVID
+		[ $? -eq 0 ] && echo "User has been added to system!" || echo "Failed to add a user!"
+	fi
+else
+	echo "Only root may add a user to the system"
+	exit 2
+fi
+
 # - Install - 
 # - Minecraft - 
 if [[ "$GAMETOINSTALL" = "minecraft" ]] ; then
