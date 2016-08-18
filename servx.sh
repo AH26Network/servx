@@ -74,11 +74,6 @@ read MCVS
         echo "No version found"
         exit
     fi
-# - Gmod - 
-else if [[ "$GAMETOINSTALL" = "gmod" ]] ; then
-echo "Downloading SteamCMD ..."
-#wget ...
-echo "Download SteamCMD : Success"
 fi
 
 # - DONE - 
