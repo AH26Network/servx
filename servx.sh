@@ -84,10 +84,21 @@ read MCVS
         $STATUS = OK
     elif [[ "$MCVS" == "1.7.10" ]]; then
         echo "Installing Minecraft Server in $MCVS"
-        #install step
+        echo "Downloading Spigot in $MCVS"
+	wget -O /home/$username/ http://www.thetueurcity.com/download/spigot1.7.10.jar
+	chmod +x /home/$username/spigot1.7.10.jar
+	echo screen -h 1024 -dmS $GAMETOINSTALL_$SRVID java -Xms512M -Xmx1024M -jar -XX:ParallelGCThreads=1 craftbukkit.jar >> /home/$username/start.sh
+	chmod +x /home/$username/start.sh
     else
         echo "No version found"
         exit
     fi
+# - Gmod - 
+else if [[ "$GAMETOINSTALL" = "gmod" ]] ; then
+echo "Downloading SteamCMD ..."
+#wget ...
+echo "Download SteamCMD : Success"
 fi
+
+# - DONE - 
 echo Done !
