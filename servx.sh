@@ -114,7 +114,7 @@ echo "Steam Downloading success"
     chmod +x /home/$GAMETOINSTAL-$SRVID/steamcmd.sh
     chmod -R 777 /home/$GAMETOINSTAL-$SRVID/
 echo "Downloading Gmod"
-    #./steamcmd.sh +login anonymous +app_update 4020 validate +quit
+    ./steamcmd.sh +login anonymous +app_update 4020 validate +quit
 echo "Gmod Downloading success"
   read -p "Number of Slots ?" GMOD_SLOTS
 echo -e "${GREEN}Game Mode suported"
