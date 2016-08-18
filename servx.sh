@@ -108,6 +108,9 @@ wget -O /home/$GAMETOINSTALL-$SRVID/steamcmd_linux.tar.gz https://steamcdn-a.aka
 cd /home/$GAMETOINSTALL-$SRVID/
 tar -xzf steamcmd_linux.tar.gz
 echo "Downloading SteamCMD Success"
+chmod +x steamcmd.sh
+./steamcmd.sh +login anonymous +app_update 258550 validate +quit
+cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/
 fi
 
 # - Dontstrave
