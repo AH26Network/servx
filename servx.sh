@@ -6,6 +6,7 @@
 #
 
 SERVX_VERSION="1.0.0"
+SERVX_VERSION_DATE="18-Aug-16"
 OS=$(uname -s)
 VER=$(uname -r)
 ARCH=$(uname -m)
