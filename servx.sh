@@ -26,7 +26,7 @@ echo -e "${NC}OS Detected : $OS  $VER  $ARCH"
 echo "Current date : $DATE"
 echo ""
 echo "Current games supported by Servx :"
-echo "Gmod, Rust, Minecraft, Don't starve together, Unturned"
+echo "Gmod, Rust, Minecraft, Don't Starve Together"
 echo ""
 sleep 1
 echo "Enter the full name of the game to install without uppercase : "
