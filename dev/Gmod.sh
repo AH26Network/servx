@@ -30,4 +30,5 @@ echo "Downloading Murder ..."
   unzip master.zip
 echo "Murder Downloading Success"  
   fi
+  echo screen -h 1024 -dmS $GAMETOINSTALL-$SRVID ./srcds_run -game garrysmod +maxplayers $GMOD_SLOTS +map gm_construct +gamemode $GMOD_GAMEMODE >> start.sh
  fi
