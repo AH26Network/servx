@@ -53,16 +53,6 @@ apt-get upgrade -y
 sleep 1
 apt-get install screen -y
 
-# - Create User - 
-echo "$GAMETOINSTALL-$SRVID"
-read  -p "Enter password for $GAMETOINSTALL Server $SRVID : " password
-egrep "^$GAMETOINSTALL-$SRVID" /etc/passwd >/dev/null
-pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
-useradd -m -p $pass $GAMETOINSTALL-$SRVID
-echo "User has been added to system!"
-
-echo "debug mode"
-
 # - Install - 
 # - Minecraft - 
 if [[ "$GAMETOINSTALL" = "minecraft" ]] ; then
