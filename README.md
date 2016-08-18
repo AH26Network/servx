@@ -1,7 +1,7 @@
 # servx
 
 ---
-Servx is a automatic installer and cofigurateur for your games servers.
+Servx is a automatic installer and configurateur for your games servers.
 ---
 
 To run servx, execute this command (in root) :
