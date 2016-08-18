@@ -53,7 +53,7 @@ apt-get upgrade -y
 sleep 1
 apt-get install screen -y
 
-# - Create User for Minecraft Server - 
+# - Create User - 
 if [ $(id -u) -eq 0 ]; then
 	#read -p "Enter username : " username
 	#$username = "$GAMETOINSTALL_$SRVID"
@@ -95,9 +95,22 @@ read MCVS
         exit
     fi
 fi
+
+# - GMOD - 
 if [[ "$GAMETOINSTALL" = "gmod" ]] ; then
 echo "Downloading SteamCMD ..."
 fi
+
+# - RUST - 
+if [[ "$GAMETOINSTALL" = "rust" ]] ; then
+echo "Downloading SteamCMD ..."
+wget -O /home/$GAMETOINSTALL-$SRVID/steamcmd_linux.tar.gz https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
+cd /home/$GAMETOINSTALL-$SRVID/
+tar -xzf steamcmd_linux.tar.gz
+echo "Downloading SteamCMD Success"
+
+# - Dontstrave
+
 
 # - DONE - 
 echo Done !
