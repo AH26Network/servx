@@ -12,14 +12,17 @@ ARCH=$(uname -m)
 DATE=$(date)
 
 RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # - Welcome msg - 
-echo -e "${RED}#######################################"
+echo -e "${GREEN}#######################################"
 echo "Welcome on Servx Automated Installation"
 echo "Warning : This script is developed for Debian 8 x64"
-echo -e "${RED}#######################################"
-echo "OS Detected : $OS  $VER  $ARCH"
+echo "#######################################"
+echo -e "${NC}OS Detected : $OS  $VER  $ARCH"
 echo "Current date : $DATE"
 echo ""
 echo "Current games supported by Servx :"
