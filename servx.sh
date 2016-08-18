@@ -52,7 +52,7 @@ apt-get update
 sleep 1
 apt-get upgrade -y
 sleep 1
-apt-get install screen -y
+apt-get install screen steam -y
 apt-get install ia32-libs ia32-libs-gtk -y
 
 # - Create User - 
