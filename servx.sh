@@ -13,6 +13,7 @@ ARCH=$(uname -m)
 DATE=$(date)
 HOSTNAME=$(hostname)
 IP=$(dig +short myip.opendns.com @resolver1.opendns.com)
+STATUS="ERROR"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -61,6 +62,7 @@ read MCVS
     if [[ "$MCVS" == "0" ]]; then
         echo "Installing Minecraft Server latest version"
         #install step
+        $STATUS = OK
     elif [[ "$MCVS" == "1.7.10" ]]; then
         echo "Installing Minecraft Server in $MCVS"
         #install step
@@ -68,5 +70,9 @@ read MCVS
         echo "No version found"
         exit
     fi
+fi
+if [[ "$GAMETOINSTALL" = "minecraft" || "$STATUS" == "OK" ]] ; then
+echo "Your $GAMETOINSTALL is ready to launch"
+# more...
 fi
 echo Done !
