@@ -53,31 +53,32 @@ apt-get upgrade -y
 sleep 1
 apt-get install screen -y
 
-# - Install - 
-# - Minecraft - 
-if [[ "$GAMETOINSTALL" = "minecraft" ]] ; then
-apt-get install openjdk-7-jre -y
-echo "Version of Minecraft ? (0 = latest)"
-read MCVS
 # - Create User for Minecraft Server - 
-else if [ $(id -u) -eq 0 ]; then
+if [ $(id -u) -eq 0 ]; then
 	#read -p "Enter username : " username
 	#$username = "$GAMETOINSTALL_$SRVID"
-	echo "minecraftsrv_$SRVID"
+	echo "$GAMETOINSTALL+_$SRVID"
 	read  -p "Enter password for $GAMETOINSTALL Server $SRVID : " password
-	egrep "^minecraftsrv_$SRVID" /etc/passwd >/dev/null
+	egrep "^$GAMETOINSTALL+_$SRVID" /etc/passwd >/dev/null
 	if [ $? -eq 0 ]; then
-		echo "minecraftsrv_$SRVID exists!"
+		echo "$GAMETOINSTALL+_$SRVID exists!"
 		exit 1
 	else
 		pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
-		useradd -m -p $pass minecraftsrv_$SRVID
+		useradd -m -p $pass $GAMETOINSTALL+_$SRVID
 		[ $? -eq 0 ] && echo "User has been added to system!" || echo "Failed to add a user!"
 	fi
 else
 	echo "Only root may add a user to the system"
 	exit 2
 fi
+
+# - Install - 
+# - Minecraft - 
+if [[ "$GAMETOINSTALL" = "minecraft" ]] ; then
+apt-get install openjdk-7-jre -y
+echo "Version of Minecraft ? (0 = latest)"
+read MCVS
     if [[ "$MCVS" == "0" ]]; then
         echo "Installing Minecraft Server latest version"
         #install step
