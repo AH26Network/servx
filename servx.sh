@@ -18,7 +18,7 @@ NC='\033[0m' # No Color
 echo -e "${RED}#######################################"
 echo "Welcome on Servx Automated Installation"
 echo "Warning : This script is developed for Debian 8 x64"
-echo "#######################################"
+echo -e "${RED}#######################################"
 echo "OS Detected : $OS  $VER  $ARCH"
 echo "Current date : $DATE"
 echo ""
