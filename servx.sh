@@ -37,10 +37,10 @@ echo -e "${NC} "
 sleep 1
 echo "Enter the full name of the game to install without uppercase and spaces : "
 read GAMETOINSTALL
-echo "$GAMETOINSTALL selected !"
+echo -e "${GREEN}$GAMETOINSTALL selected !${NC}"
 echo "Enter number of the server installation (shouldn't be used by another install)"
 read SRVID
-echo "$GAMETOINSTALL number $SRVID selected !"
+echo -e "${GREEN}$GAMETOINSTALL number $SRVID selected !${NC}"
 echo ""
 
 # - Updatating dedicated server - 
