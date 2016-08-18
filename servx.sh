@@ -11,8 +11,11 @@ VER=$(uname -r)
 ARCH=$(uname -m)
 DATE=$(date)
 
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
 # - Welcome msg - 
-echo "#######################################"
+echo -e "${RED}#######################################"
 echo "Welcome on Servx Automated Installation"
 echo "Warning : This script is developed for Debian 8 x64"
 echo "#######################################"
