@@ -119,7 +119,8 @@ echo "Gmod Downloading success"
 read -p "Number of Slots ?" GMOD_SLOTS
 echo -e "${GREEN}Game Mode suported"
 echo -e "Sandbox;DarkRP;Muder;PropHunt;JailBreak${NC}"
-read -p "What Game Mode" GMOD_GAMEMODE
+echo "What Game Mode" 
+read GMOD_GAMEMODE
 if [[ "$GMOD_GAMEMODE" == "darkrp" ]] ; then
 echo "Downloading DarkRP ..."
 wget -O /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/darkrp.zip https://github.com/FPtje/DarkRP/archive/master.zip
