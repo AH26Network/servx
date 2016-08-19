@@ -245,7 +245,7 @@ if [[ "$GMOD_GAMEMODE" == "darkrp" ]] ; then
 echo "Downloading DarkRP ..."
 wget -O /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/darkrp.zip https://github.com/FPtje/DarkRP/archive/master.zip
 cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/
-unzip master.zip
+unzip darkrp.zip
 echo "DarkRP Downloading success"
 fi
 if [[ "$GMOD_GAMEMODE" == "prophunt" ]] ; then
@@ -259,10 +259,10 @@ if [[ "$GMOD_GAMEMODE" == "murder" ]] ; then
 echo "Downloading Murder ..."
 wget -O /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/murder.zip https://github.com/mechanicalmind/murder/archive/master.zip
 cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/
-unzip master.zip
+unzip murder.zip
 echo "Murder Downloading Success"  
 fi
-echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID ./srcds_run -game garrysmod +maxplayers $GMOD_SLOTS +map gm_construct +gamemode $GMOD_GAMEMODE" >> /home/$GAMETOINSTAL-$SRVID/Steam/steamapps/common/GarrysModDS/start.sh
+echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID ./srcds_run -game garrysmod +maxplayers $GMOD_SLOTS +map gm_construct +gamemode $GMOD_GAMEMODE" >> /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/GarrysModDS/start.sh
 fi
 
 # - RUST - 
