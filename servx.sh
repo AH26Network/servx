@@ -332,7 +332,7 @@ echo "More informations on Github.com : https://github.com/AH26Network/servx/" >
 
 echo ""
 echo -e "${GREEN}Your game server was successfuly created !"
-echo -e "${BLUE}Your server credentials is in ${red}/home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt${BLUE}."
+echo -e "${BLUE}Your server credentials is in ${RED}/home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt${BLUE}."
 echo -e "${NC} "
 
 
