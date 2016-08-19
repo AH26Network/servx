@@ -322,7 +322,7 @@ echo "" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
 echo "Warning : if you delete any file on your server, you may endommaged your game server" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
 echo "" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
 echo "---" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
-echo "Game Server Informations" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "Game Server Informations :" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
 echo "IP : $IP" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
 echo "Game : $GAMETOINSTALL" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
 echo "Number of server install : $SRVID" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
@@ -330,8 +330,10 @@ echo "" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
 echo "Thank for using Servx, Servx has been create with github.com by Edouard CONNOR and Phenix" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
 echo "More informations on Github.com : https://github.com/AH26Network/servx/" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
 
-
+echo -e "${GREEN}Your game server was successfuly created !"
+echo -e "${BLUE}Your server credentials is in ${red}/home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt${BLUE}."
+echo -e "${NC} "
 
 
 # - DONE - 
-echo Done !
+echo "Done !"
