@@ -104,6 +104,34 @@ read MCVS
 	chmod +x /home/$GAMETOINSTALL-$SRVID/craftbukkit-1.7.9-R0.2-SNAPSHOT.jar
 	echo screen -h 1024 -dmS $GAMETOINSTALL-$SRVID java -Xms512M -Xmx1024M -jar -XX:ParallelGCThreads=1 craftbukkit-1.7.9-R0.2-SNAPSHOT.jar >> /home/$GAMETOINSTALL-$SRVID/start.sh
 	chmod +x /home/$GAMETOINSTALL-$SRVID/start.sh
+    elif [[ "$MCVS" == "1.7.8" ]]; then
+        echo "Installing Minecraft Server in $MCVS"
+        echo "Downloading Spigot in $MCVS"
+	wget -O /home/$GAMETOINSTALL-$SRVID/craftbukkit-1.7.8-R0.2-SNAPSHOT.jar https://www.getbukkit.org/files/craftbukkit-1.7.8-R0.2-SNAPSHOT.jar
+	chmod +x /home/$GAMETOINSTALL-$SRVID/craftbukkit-1.7.8-R0.2-SNAPSHOT.jar
+	echo screen -h 1024 -dmS $GAMETOINSTALL-$SRVID java -Xms512M -Xmx1024M -jar -XX:ParallelGCThreads=1 craftbukkit-1.7.8-R0.2-SNAPSHOT.jar >> /home/$GAMETOINSTALL-$SRVID/start.sh
+	chmod +x /home/$GAMETOINSTALL-$SRVID/start.sh
+    elif [[ "$MCVS" == "1.7.5" ]]; then
+        echo "Installing Minecraft Server in $MCVS"
+        echo "Downloading Spigot in $MCVS"
+	wget -O /home/$GAMETOINSTALL-$SRVID/craftbukkit-1.7.5-R0.2-SNAPSHOT.jar https://www.getbukkit.org/files/craftbukkit-1.7.5-R0.2-SNAPSHOT.jar
+	chmod +x /home/$GAMETOINSTALL-$SRVID/craftbukkit-1.7.5-R0.2-SNAPSHOT.jar
+	echo screen -h 1024 -dmS $GAMETOINSTALL-$SRVID java -Xms512M -Xmx1024M -jar -XX:ParallelGCThreads=1 craftbukkit-1.7.5-R0.2-SNAPSHOT.jar >> /home/$GAMETOINSTALL-$SRVID/start.sh
+	chmod +x /home/$GAMETOINSTALL-$SRVID/start.sh
+    elif [[ "$MCVS" == "1.7.2" ]]; then
+        echo "Installing Minecraft Server in $MCVS"
+        echo "Downloading Spigot in $MCVS"
+	wget -O /home/$GAMETOINSTALL-$SRVID/craftbukkit-1.7.2-R0.2-SNAPSHOT.jar https://www.getbukkit.org/files/craftbukkit-1.7.2-R0.2-SNAPSHOT.jar
+	chmod +x /home/$GAMETOINSTALL-$SRVID/craftbukkit-1.7.2-R0.2-SNAPSHOT.jar
+	echo screen -h 1024 -dmS $GAMETOINSTALL-$SRVID java -Xms512M -Xmx1024M -jar -XX:ParallelGCThreads=1 craftbukkit-1.7.2-R0.2-SNAPSHOT.jar >> /home/$GAMETOINSTALL-$SRVID/start.sh
+	chmod +x /home/$GAMETOINSTALL-$SRVID/start.sh
+    elif [[ "$MCVS" == "1.7.9" ]]; then
+        echo "Installing Minecraft Server in $MCVS"
+        echo "Downloading Spigot in $MCVS"
+	wget -O /home/$GAMETOINSTALL-$SRVID/craftbukkit-1.6.4-R2.0.jar https://www.getbukkit.org/files/craftbukkit-1.6.4-R2.0.jar
+	chmod +x /home/$GAMETOINSTALL-$SRVID/craftbukkit-1.6.4-R2.0.jar
+	echo screen -h 1024 -dmS $GAMETOINSTALL-$SRVID java -Xms512M -Xmx1024M -jar -XX:ParallelGCThreads=1 craftbukkit-1.6.4-R2.0.jar >> /home/$GAMETOINSTALL-$SRVID/start.sh
+	chmod +x /home/$GAMETOINSTALL-$SRVID/start.sh	
     else    
         echo "No version found"
         exit
