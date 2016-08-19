@@ -4,6 +4,7 @@
 #
 #  This program is free software developed by Edouard CONNOR & Phenix for AH26
 #
+# GAMES : Rust:ok Terraria:ok Gmod:ok Minecraft:ok
 
 SERVX_VERSION="1.0.0"
 SERVX_VERSION_DATE="19-Aug-16"
@@ -34,7 +35,7 @@ sleep 1
 
 # - Select Game - 
 echo -e "${GREEN}Current games supported by Servx :"
-echo "Minecraft, Gmod, Rust, Don't Starve Together, Terraria"
+echo "Minecraft, Gmod, Rust, Do not Starve Together, Terraria"
 echo -e "${NC} "
 sleep 1
 echo "Enter the full name of the game to install without uppercase and spaces : "
