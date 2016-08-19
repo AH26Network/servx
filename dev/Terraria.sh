@@ -8,4 +8,4 @@ chmod +x steamcmd.sh
 chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
 sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login anonymous +app_update 105600 validate +quit
 echo "Gmod Downloading success"
-echo "screen -h 1024 -dmS mono --server --gc=sgen -O=all TerrariaServer.exe
+echo "screen -h 1024 -dmS mono --server --gc=sgen -O=all TerrariaServer.exe"
