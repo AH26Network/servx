@@ -302,9 +302,24 @@ echo "Terraria Downloading success"
 echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID mono --server --gc=sgen -O=all TerrariaServer.exe" >> /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Terraria/start.sh
 fi
 
-# - Dontstrave
-
-
+# - Dontstarve
+if [[ "$GAMETOINSTALL" = "dontstarve" ]] ; then
+dpkg --add-architecture i386
+apt-get install lib32gcc1
+apt-get install lib32stdc++6
+apt-get install libgcc1
+apt-get install libcurl4-gnutls-dev:i386
+echo "Downloading SteamCMD ..."
+wget -O /home/$GAMETOINSTALL-$SRVID/steamcmd_linux.tar.gz https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
+cd /home/$GAMETOINSTALL-$SRVID/
+tar -xzf steamcmd_linux.tar.gz
+echo "Downloading SteamCMD Success"
+echo "Downloading Don't Starve ..."
+chmod +x steamcmd.sh
+chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
+sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login anonymous +app_update 343050 validate +quit
+echo "DontStrave Downloading success"
+fi
 # - Install infos - 
 echo "Congratulation ! Your server is fully installed." >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
 echo "" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
