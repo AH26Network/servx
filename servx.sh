@@ -277,7 +277,11 @@ chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
 sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login anonymous +app_update 258550 validate +quit
 #./steamcmd.sh +login anonymous +app_update 258550 validate +quit
 #sshpass -p $password ssh $GAMETOINSTALL-$SRVID@localhost './steamcmd.sh +login anonymous +app_update 258550 validate +quit'
-cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/
+read  -p "Enter $GAMETOINSTALL Server name : " RUST_NAME
+read  -p "Enter $GAMETOINSTALL Server Slots : " RUST_SLOT
+read  -p "Enter $GAMETOINSTALL Server Rcon Password : " RUST_RCPASSWD
+cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/rust_dedicated/
+echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID ./RustDedicated -batchmode +server.ip $IP +server.port 28015 +server.tickrate 30 +server.hostname "$RUST_NAME" +server.identity "$RUST_NAME" +server.maxplayers $RUST_SLOT +server.worldsize 4000 +server.saveinterval 600 +rcon.ip 0.0.0.0 +rcon.port 28016 +rcon.password "$RUST_RCPASSWD"" >> /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/rust_dedicated/start.sh
 fi
 
 # - Terraria - 
@@ -300,7 +304,7 @@ fi
 
 # - Install infos - 
 echo "info1" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
-echo "\info2" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "info2" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
 
 # - DONE - 
 echo Done !
