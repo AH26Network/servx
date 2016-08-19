@@ -319,7 +319,10 @@ chmod +x steamcmd.sh
 chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
 sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login anonymous +app_update 343050 validate +quit
 echo "DontStrave Downloading success"
+cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Don't Starve Together Dedicated Server/
+echo "screen -h 1024 -dmS ./dontstarve_dedicated_server_nullrenderer
 fi
+
 # - Install infos - 
 echo "Congratulation ! Your server is fully installed." >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
 echo "" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
