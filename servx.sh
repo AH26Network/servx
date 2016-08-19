@@ -221,6 +221,7 @@ read MCVS
         echo "No version found"
         exit
     fi
+    wget -O /home/$GAMETOINSTALL-$SRVID/eula.txt https://raw.githubusercontent.com/AH26Network/servx/master/dl/minecraft_eula.txt
 fi
 
 # - GMOD - 
