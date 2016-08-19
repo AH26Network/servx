@@ -100,17 +100,17 @@ read MCVS
     elif [[ "$MCVS" == "1.7.10" ]]; then
         echo "Installing Minecraft Server in $MCVS"
         echo "Downloading Spigot in $MCVS"
-	wget -O /home/$GAMETOINSTALL-$SRVID/spigot1.7.10.jar http://www.thetueurcity.com/download/spigot1.7.10.jar
-	chmod +x /home/$GAMETOINSTALL-$SRVID/spigot1.7.10.jar
-	echo screen -h 1024 -dmS $GAMETOINSTALL-$SRVID java -Xms512M -Xmx1024M -jar -XX:ParallelGCThreads=1 spigot1.7.10.jar >> /home/$GAMETOINSTALL-$SRVID/start.sh
+	wget -O /home/$GAMETOINSTALL-$SRVID/craftbukkit-1.7.10-R0.2-SNAPSHOT.jar https://www.getbukkit.org/files/craftbukkit-1.7.10-R0.2-SNAPSHOT.jar
+	chmod +x /home/$GAMETOINSTALL-$SRVID/craftbukkit-1.7.10-R0.2-SNAPSHOT.jar
+	echo screen -h 1024 -dmS $GAMETOINSTALL-$SRVID java -Xms512M -Xmx1024M -jar -XX:ParallelGCThreads=1 craftbukkit-1.7.10-R0.2-SNAPSHOT.jar >> /home/$GAMETOINSTALL-$SRVID/start.sh
 	chmod +x /home/$GAMETOINSTALL-$SRVID/start.sh
     else
     elif [[ "$MCVS" == "1.7.9" ]]; then
         echo "Installing Minecraft Server in $MCVS"
         echo "Downloading Spigot in $MCVS"
-	wget -O /home/$GAMETOINSTALL-$SRVID/spigot1.7.10.jar http://www.thetueurcity.com/download/spigot1.7.9.jar
-	chmod +x /home/$GAMETOINSTALL-$SRVID/spigot1.7.10.jar
-	echo screen -h 1024 -dmS $GAMETOINSTALL-$SRVID java -Xms512M -Xmx1024M -jar -XX:ParallelGCThreads=1 spigot1.7.10.jar >> /home/$GAMETOINSTALL-$SRVID/start.sh
+	wget -O /home/$GAMETOINSTALL-$SRVID/craftbukkit-1.7.9-R0.2-SNAPSHOT.jar https://www.getbukkit.org/files/craftbukkit-1.7.9-R0.2-SNAPSHOT.jar
+	chmod +x /home/$GAMETOINSTALL-$SRVID/craftbukkit-1.7.9-R0.2-SNAPSHOT.jar
+	echo screen -h 1024 -dmS $GAMETOINSTALL-$SRVID java -Xms512M -Xmx1024M -jar -XX:ParallelGCThreads=1 craftbukkit-1.7.9-R0.2-SNAPSHOT.jar >> /home/$GAMETOINSTALL-$SRVID/start.sh
 	chmod +x /home/$GAMETOINSTALL-$SRVID/start.sh
     else    
         echo "No version found"
