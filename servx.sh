@@ -4,7 +4,7 @@
 #
 #  This program is free software developed by Edouard CONNOR & Phenix for AH26
 #
-# GAMES : Rust:ok Terraria:ok Gmod:ok Minecraft:ok
+# GAMES : Rust:ok Terraria:ok Gmod:ok Minecraft:ok DonotStarveTogether:NA
 
 SERVX_VERSION="1.0.0"
 SERVX_VERSION_DATE="19-Aug-16"
