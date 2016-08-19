@@ -296,15 +296,40 @@ chmod +x steamcmd.sh
 chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
 sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login anonymous +app_update 105600 validate +quit
 echo "Terraria Downloading success"
-echo "screen -h 1024 -dmS mono --server --gc=sgen -O=all TerrariaServer.exe" >> /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Terraria/start.sh
+echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID mono --server --gc=sgen -O=all TerrariaServer.exe" >> /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Terraria/start.sh
 fi
 
 # - Dontstrave
 
 
 # - Install infos - 
-echo "info1" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
-echo "info2" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "Congratulation ! Your server is fully installed." >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "You have installed $GAMETOINSTALL Server $SRVID on $HOSTNAME" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "To use your game server please run the start.sh in your server directory" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "After that, to see console run command : screen -x $GAMETOINSTALL-$SRVID" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "(to quit console without close server use ctrl+a+d and to close the server use ctrl+c)" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "To modify the server properties, you should connect by FTP on the server :" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "Protocol : FTP" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "Host : $IP" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "Username : $GAMETOINSTALL-$SRVID" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "Password : $password" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "Warning : if you delete any file on your server, you may endommaged your game server" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "---" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "Game Server Informations" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "IP : $IP" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "Game : $GAMETOINSTALL" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "Number of server install : $SRVID" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "Thank for using Servx, Servx has been create with github.com by Edouard CONNOR and Phenix" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "More informations on Github.com : https://github.com/AH26Network/servx/" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+
+
+
 
 # - DONE - 
 echo Done !
