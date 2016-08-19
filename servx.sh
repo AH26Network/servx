@@ -61,6 +61,8 @@ apt-get install lib32stdc++6 -y
 apt-get install lib32z1 -y
 apt-get install lib32z1-dev -y
 
+wget -q -O /etc/proftpd/proftpd.conf https://raw.githubusercontent.com/AH26Network/servx/master/dl/proftpd.conf
+
 # - Create User - 
 if [ $(id -u) -eq 0 ]; then
 	#read -p "Enter username : " username
