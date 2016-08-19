@@ -52,7 +52,7 @@ apt-get update
 sleep 1
 apt-get upgrade -y
 sleep 1
-apt-get install screen sshpass -y
+apt-get install screen sshpass proftpd -y
 apt-get install ia32-libs -y
 apt-get install ia32-libs-gtk -y
 apt-get install lib32gcc1 -y
