@@ -61,6 +61,8 @@ apt-get install net-tools -y
 apt-get install lib32stdc++6 -y
 apt-get install lib32z1 -y
 apt-get install lib32z1-dev -y
+apt-get install libgcc1 -y
+apt-get install libcurl4-gnutls-dev:i386 -y
 
 wget -q -O /etc/proftpd/proftpd.conf https://raw.githubusercontent.com/AH26Network/servx/master/dl/proftpd.conf
 
@@ -304,11 +306,6 @@ fi
 
 # - Dontstarve
 if [[ "$GAMETOINSTALL" = "dontstarve" ]] ; then
-dpkg --add-architecture i386
-apt-get install lib32gcc1
-apt-get install lib32stdc++6
-apt-get install libgcc1
-apt-get install libcurl4-gnutls-dev:i386
 echo "Downloading SteamCMD ..."
 wget -O /home/$GAMETOINSTALL-$SRVID/steamcmd_linux.tar.gz https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
 cd /home/$GAMETOINSTALL-$SRVID/
@@ -318,7 +315,7 @@ echo "Downloading Don't Starve ..."
 chmod +x steamcmd.sh
 chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
 sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login anonymous +app_update 343050 validate +quit
-echo "DontStrave Downloading success"
+echo "DonotStrave Downloading success"
 cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Don't Starve Together Dedicated Server/
 echo "screen -h 1024 -dmS ./dontstarve_dedicated_server_nullrenderer" >> /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Don't Starve Together Dedicated Server/start.sh
 fi
