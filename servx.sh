@@ -262,7 +262,7 @@ cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/game
 unzip master.zip
 echo "Murder Downloading Success"  
 fi
-echo screen -h 1024 -dmS $GAMETOINSTALL-$SRVID ./srcds_run -game garrysmod +maxplayers $GMOD_SLOTS +map gm_construct +gamemode $GMOD_GAMEMODE >> /home/$GAMETOINSTAL-$SRVID/Steam/steamapps/common/GarrysModDS/start.sh
+echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID ./srcds_run -game garrysmod +maxplayers $GMOD_SLOTS +map gm_construct +gamemode $GMOD_GAMEMODE" >> /home/$GAMETOINSTAL-$SRVID/Steam/steamapps/common/GarrysModDS/start.sh
 fi
 
 # - RUST - 
