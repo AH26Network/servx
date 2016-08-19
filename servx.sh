@@ -6,7 +6,7 @@
 #
 
 SERVX_VERSION="1.0.0"
-SERVX_VERSION_DATE="18-Aug-16"
+SERVX_VERSION_DATE="19-Aug-16"
 OS=$(uname -s)
 VER=$(uname -r)
 ARCH=$(uname -m)
@@ -34,7 +34,7 @@ sleep 1
 
 # - Select Game - 
 echo -e "${GREEN}Current games supported by Servx :"
-echo "Minecraft, Gmod, Rust, Don't Starve Together"
+echo "Minecraft, Gmod, Rust, Don't Starve Together, Terraria"
 echo -e "${NC} "
 sleep 1
 echo "Enter the full name of the game to install without uppercase and spaces : "
