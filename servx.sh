@@ -298,5 +298,9 @@ fi
 # - Dontstrave
 
 
+# - Install infos - 
+echo "info1" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+echo "\info2" >> /home/$GAMETOINSTALL-$SRVID/install-$GAMETOINSTALL-$SRVID-report.txt
+
 # - DONE - 
 echo Done !
