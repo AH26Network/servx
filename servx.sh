@@ -222,6 +222,7 @@ read MCVS
         exit
     fi
 fi
+
 # - GMOD - 
 if [[ "$GAMETOINSTALL" = "gmod" ]] ; then
 echo "Downloading SteamCMD ..."
@@ -232,7 +233,7 @@ echo "Steam Downloading success"
 chmod +x /home/$GAMETOINSTALL-$SRVID/steamcmd.sh
 chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
 echo "Downloading Gmod"
-./steamcmd.sh +login anonymous +app_update 4020 validate +quit
+sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login anonymous +app_update 4020 validate +quit
 echo "Gmod Downloading success"
 read -p "Number of Slots ?" GMOD_SLOTS
 echo -e "${GREEN}Game Mode suported"
