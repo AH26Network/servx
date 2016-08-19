@@ -35,7 +35,7 @@ sleep 1
 
 # - Select Game - 
 echo -e "${GREEN}Current games supported by Servx :"
-echo "Minecraft, Gmod, Rust, Do not Starve Together, Terraria"
+echo "Minecraft, Gmod, Rust, Dontstarve, Terraria"
 echo -e "${NC} "
 sleep 1
 echo "Enter the full name of the game to install without uppercase and spaces : "
@@ -316,8 +316,8 @@ chmod +x steamcmd.sh
 chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
 sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login anonymous +app_update 343050 validate +quit
 echo "DonotStrave Downloading success"
-cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Don't Starve Together Dedicated Server/
-echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID ./dontstarve_dedicated_server_nullrenderer" >> /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Don't Starve Together Dedicated Server/start.sh
+cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Don\'t\ Starve\ Together\ Dedicated\ Server/
+echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID ./dontstarve_dedicated_server_nullrenderer" >> /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Don\'t\ Starve\ Together\ Dedicated\ Server/start.sh
 fi
 
 # - Install infos - 
