@@ -154,8 +154,8 @@ tar -xzf steamcmd_linux.tar.gz
 echo "Downloading SteamCMD Success"
 chmod +x steamcmd.sh
 chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
-su $GAMETOINSTALL-$SRVID;
-./steamcmd.sh +login anonymous +app_update 258550 validate +quit
+sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login anonymous +app_update 258550 validate +quit
+#./steamcmd.sh +login anonymous +app_update 258550 validate +quit
 #sshpass -p $password ssh $GAMETOINSTALL-$SRVID@localhost './steamcmd.sh +login anonymous +app_update 258550 validate +quit'
 cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/
 fi
