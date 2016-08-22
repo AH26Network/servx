@@ -7,7 +7,7 @@
 # GAMES : Rust:ok Terraria:ok Gmod:ok Minecraft:ok DonotStarveTogether:NA
 
 SERVX_VERSION="1.0.0"
-SERVX_VERSION_DATE="19-Aug-16"
+SERVX_VERSION_DATE="22-Aug-16"
 OS=$(uname -s)
 VER=$(uname -r)
 ARCH=$(uname -m)
@@ -53,7 +53,7 @@ apt-get update
 sleep 1
 apt-get upgrade -y
 sleep 1
-apt-get install screen sshpass proftpd -y
+apt-get install screen sshpass proftpd sudo -y
 apt-get install ia32-libs -y
 apt-get install ia32-libs-gtk -y
 apt-get install lib32gcc1 -y
