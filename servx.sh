@@ -318,6 +318,46 @@ sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login anonymous +app_update 343050 
 echo "DonotStrave Downloading success"
 cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Don\'t\ Starve\ Together\ Dedicated\ Server/bin/
 echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID ./dontstarve_dedicated_server_nullrenderer" >> /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Don\'t\ Starve\ Together\ Dedicated\ Server/bin/start.sh
+mkdir /home/$GAMETOINSTALL-$SRVID/.Klei
+mkdir /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether
+mkdir /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1
+
+echo "Generating Cluster Token ..."
+echo "jQk1AAwWWDjePL6/NhB69xceBmTs+ZfQ" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster_token.txt
+
+echo "Creating config ..."
+echo "[GAMEPLAY]" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+read -p "Your DST Server Gamemode : (endless | survival | wilderness) " DST_GAMEMODE
+echo "game_mode = $DST_GAMEMODE" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+read -p "Your DST Server Max Players : " DST_PLAYERS
+echo "max_players = $DST_PLAYERS" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+read -p "Enable PvP ? : (true | false)" DST_PVP
+echo "pvp = $DST_PVP" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+echo "pause_when_empty = true" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+echo "" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+echo "[NETWORK]" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+echo "lan_only_cluster = false" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+read -p "Your DST Server Intention : (cooperative | social | competitive | madness) " DST_INTENTION
+echo "cluster_intention = $DST_INTENTION" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+read -p "Your DST Server Description : " DST_DESCRIP
+echo "cluster_description = $DST_DESCRIP" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+read -p "Your DST Server Name : " DST_NAME
+echo "cluster_name = $DST_NAME" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+echo "offline_cluster = false" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+read -p "Your DST Server Password : (empty for no password) " DST_PWD
+echo "cluster_password = $DST_PWD" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+echo "" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+echo "[MISC]" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+echo "console_enabled = true" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+echo "" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+echo "[SHARD]" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+echo "shard_enabled = false" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+echo "bind_ip = 127.0.0.1" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+echo "master_ip = 127.0.0.1" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+echo "master_port = 10888" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+echo "cluster_key = defaultPass" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
+
+
 fi
 
 # - Install infos - 
