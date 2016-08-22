@@ -318,6 +318,7 @@ sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login anonymous +app_update 343050 
 echo "DonotStrave Downloading success"
 cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Don\'t\ Starve\ Together\ Dedicated\ Server/bin/
 echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID ./dontstarve_dedicated_server_nullrenderer" >> /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Don\'t\ Starve\ Together\ Dedicated\ Server/bin/start.sh
+chmod +x /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Don\'t\ Starve\ Together\ Dedicated\ Server/bin/start.sh
 mkdir /home/$GAMETOINSTALL-$SRVID/.Klei
 mkdir /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether
 mkdir /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1
