@@ -243,7 +243,7 @@ sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login anonymous +app_update 4020 va
 echo "Gmod Downloading success"
 read -p "Number of Slots ?" GMOD_SLOTS
 echo -e "${GREEN}Game Mode suported"
-echo -e "Sandbox;DarkRP;Muder;PropHunt;JailBreak${NC}"
+echo -e "Sandbox; DarkRP; Muder; PropHunt; JailBreak${NC}"
 echo "What Game Mode" 
 read GMOD_GAMEMODE
 if [[ "$GMOD_GAMEMODE" == "darkrp" ]] ; then
@@ -290,19 +290,18 @@ echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID ./RustDedicated -batchmode +serv
 fi
 
 # - Terraria - 
-if [[ "$GAMETOINSTALL" = "terraria" ]] ; then
-echo "Downloading SteamCMD ..."
-wget -O /home/$GAMETOINSTALL-$SRVID/steamcmd_linux.tar.gz https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
-cd /home/$GAMETOINSTALL-$SRVID/
-tar -xzf steamcmd_linux.tar.gz
-echo "Downloading SteamCMD Success"
-echo "Downloading Terraria ... "
-chmod +x steamcmd.sh
-chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
-sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login anonymous +app_update 105600 validate +quit
-echo "Terraria Downloading success"
-echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID mono --server --gc=sgen -O=all TerrariaServer.exe" >> /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Terraria/start.sh
-fi
+#echo "Downloading SteamCMD ..."
+#wget -O /home/$GAMETOINSTALL-$SRVID/steamcmd_linux.tar.gz https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
+#cd /home/$GAMETOINSTALL-$SRVID/
+#tar -xzf steamcmd_linux.tar.gz
+#echo "Downloading SteamCMD Success"
+#echo "Downloading Terraria ... "
+#chmod +x steamcmd.sh
+#chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
+#sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login anonymous +app_update 105600 validate +quit
+#echo "Terraria Downloading success"
+#echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID mono --server --gc=sgen -O=all TerrariaServer.exe" >> /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Terraria/start.sh
+#fi
 
 # - Dontstarve
 if [[ "$GAMETOINSTALL" = "dontstarve" ]] ; then
