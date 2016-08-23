@@ -289,7 +289,8 @@ cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/rust_dedicated/
 echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID ./RustDedicated -batchmode +server.ip $IP +server.port 28015 +server.tickrate 30 +server.hostname "$RUST_NAME" +server.identity "$RUST_NAME" +server.maxplayers $RUST_SLOT +server.worldsize 4000 +server.saveinterval 600 +rcon.ip 0.0.0.0 +rcon.port 28016 +rcon.password "$RUST_RCPASSWD"" >> /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/rust_dedicated/start.sh
 fi
 
-# - Terraria - 
+# - Terraria -
+if [[ "$GAMETOINSTALL" = "terraria" ]] ; then
 echo "Downloading SteamCMD ..."
 wget -O /home/$GAMETOINSTALL-$SRVID/steamcmd_linux.tar.gz https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
 cd /home/$GAMETOINSTALL-$SRVID/
