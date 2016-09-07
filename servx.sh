@@ -4,10 +4,10 @@
 #
 #  This program is free software developed by Edouard CONNOR & Phenix for AH26
 #
-# GAMES : Rust:ok Terraria:ok Gmod:ok Minecraft:ok DonotStarveTogether:NA
+# GAMES : Rust:ERR Terraria:ok Gmod:ok Minecraft:ok DonotStarveTogether:ERR
 
-SERVX_VERSION="1.0.0"
-SERVX_VERSION_DATE="22-Aug-16"
+SERVX_VERSION="1.1.0"
+SERVX_VERSION_DATE="07-Sep-16"
 OS=$(uname -s)
 VER=$(uname -r)
 ARCH=$(uname -m)
@@ -35,7 +35,7 @@ sleep 1
 
 # - Select Game - 
 echo -e "${GREEN}Current games supported by Servx :"
-echo "Minecraft, Gmod, Rust, Dontstarve, Terraria"
+echo "Minecraft, Gmod, Dontstarve (80% working), Terraria (1321)"
 echo -e "${NC} "
 sleep 1
 echo "Enter the full name of the game to install without uppercase and spaces : "
@@ -291,17 +291,15 @@ fi
 
 # - Terraria -
 if [[ "$GAMETOINSTALL" = "terraria" ]] ; then
-echo "Downloading SteamCMD ..."
-wget -O /home/$GAMETOINSTALL-$SRVID/steamcmd_linux.tar.gz https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
+echo Installing Mono ...
+apt-get install mono-complete -y
+echo Downloading Terraria Server ...
 cd /home/$GAMETOINSTALL-$SRVID/
-tar -xzf steamcmd_linux.tar.gz
-echo "Downloading SteamCMD Success"
-echo "Downloading Terraria ... "
-chmod +x steamcmd.sh
-chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
-sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login anonymous +app_update 105611 validate +quit
-echo "Terraria Downloading success"
-echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID mono --server --gc=sgen -O=all TerrariaServer.exe" >> /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/Terraria/start.sh
+wget http://terraria.org/server/terraria-server-1321.zip
+sudo -u $GAMETOINSTALL-$SRVID unzip terraria-server-1321.zip
+cd Dedicated\ Server/Linux/
+echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID mono --server --gc=sgen -O=all TerrariaServer.exe" >> /home/$GAMETOINSTALL-$SRVID/Dedicated\ Server/Linux/start.sh
+chmod +x start.sh
 fi
 
 # - Dontstarve
