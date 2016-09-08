@@ -1,4 +1,4 @@
-# servx
+# SERVX
 
 ---
 Servx is a automatic installer and configurateur for your games and web servers.
