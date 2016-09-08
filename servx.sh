@@ -4,10 +4,10 @@
 #
 #  This program is free software developed by Edouard CONNOR & Phenix for AH26
 #
-# GAMES : Rust:ERR Terraria:ok Gmod:ok Minecraft:ok DonotStarveTogether:ERR
+#  GAMES : Rust:ERR Terraria:ok Gmod:ok Minecraft:ok DonotStarveTogether:ERR(Token not found)
 
 SERVX_VERSION="1.1.0"
-SERVX_VERSION_DATE="07-Sep-16"
+SERVX_VERSION_DATE="08-Sep-16"
 OS=$(uname -s)
 VER=$(uname -r)
 ARCH=$(uname -m)
@@ -90,7 +90,7 @@ fi
 # - Minecraft - 
 if [[ "$GAMETOINSTALL" = "minecraft" ]] ; then
 apt-get install openjdk-7-jre -y
-echo "Version of Minecraft ? (0 = latest)"
+echo "Version of Minecraft ?"
 read MCVS
     if [[ "$MCVS" == "0" ]]; then
         echo "Installing Minecraft Server latest version"
