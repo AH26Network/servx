@@ -52,3 +52,31 @@ sleep 1
 apt-get upgrade -y
 
 # - Installing Services - 
+
+# - APACHE (1) - 
+if [[ "$SERVTOINSTALL" = "1" ]] ; then
+apt-get install apache2 -y
+wget -q -O /var/www/html/index.html https://raw.githubusercontent.com/AH26Network/servx/master/dl/web_default.html
+fi
+
+# - PHP5 (2) - 
+if [[ "$SERVTOINSTALL" = "2" ]] ; then
+apt-get install php5 libapache2-mod-php5 -y
+fi
+
+# - Mysql (3) - 
+if [[ "$SERVTOINSTALL" = "3" ]] ; then
+apt-get install mysql-server php5-mysql -y
+fi
+
+# - 1+2 - 
+if [[ "$SERVTOINSTALL" = "12" ]] ; then
+apt-get install apache2 php5 libapache2-mod-php5 -y
+wget -q -O /var/www/html/index.html https://raw.githubusercontent.com/AH26Network/servx/master/dl/web_default.html
+fi
+
+# - ALL - 
+if [[ "$SERVTOINSTALL" = "ALL" ]] ; then
+apt-get install apache2 php5 libapache2-mod-php5 mysql-server php5-mysql -y
+wget -q -O /var/www/html/index.html https://raw.githubusercontent.com/AH26Network/servx/master/dl/web_default.html
+fi
