@@ -13,6 +13,6 @@ To run servx (WEB ONLY), execute this command (in root) :
 
   bash <(curl -L -Ss https://raw.githubusercontent.com/AH26Network/servx/master/webservx.sh)
 
-<span style="color:orange;"> Warning : Curl need to be installed on your dedicated server. To install curl please run "apt-get install curl"</span>
+!!! Warning : Curl need to be installed on your dedicated server. To install curl please run "apt-get install curl" !!!
 
 Servx by AH26 & Edouard CONNOR - 2016
