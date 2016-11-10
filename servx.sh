@@ -280,8 +280,8 @@ echo "Downloading SteamCMD Success"
 chmod +x steamcmd.sh
 chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
 sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login anonymous +app_update 258550 validate +quit
-#./steamcmd.sh +login anonymous +app_update 258550 validate +quit
-#sshpass -p $password ssh $GAMETOINSTALL-$SRVID@localhost './steamcmd.sh +login anonymous +app_update 258550 validate +quit'
+./steamcmd.sh +login anonymous +app_update 258550 validate +quit
+sshpass -p $password ssh $GAMETOINSTALL-$SRVID@localhost './steamcmd.sh +login anonymous +app_update 258550 validate +quit'
 read  -p "Enter $GAMETOINSTALL Server name : " RUST_NAME
 read  -p "Enter $GAMETOINSTALL Server Slots : " RUST_SLOT
 read  -p "Enter $GAMETOINSTALL Server Rcon Password : " RUST_RCPASSWD
