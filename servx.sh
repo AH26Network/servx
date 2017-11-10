@@ -322,7 +322,7 @@ mkdir /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether
 mkdir /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1
 
 echo "Generating Cluster Token ..."
-echo 'pds-g^KU_Q2rjfXta^T/cQZDjEw0AEJKPeCiRxnDARrR+lFaacQnp1QgW+uAw=' >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/MyDediServer/cluster_token.txt
+echo 'pds-g^KU_Q2rjfXta^T/cQZDjEw0AEJKPeCiRxnDARrR+lFaacQnp1QgW+uAw=' >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster_token.txt
 
 echo "Creating config ..."
 echo "[GAMEPLAY]" >> /home/$GAMETOINSTALL-$SRVID/.Klei/DoNotStarvetogether/Cluster_1/cluster.ini
