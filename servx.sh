@@ -297,7 +297,7 @@ echo Downloading Terraria Server ...
 cd /home/$GAMETOINSTALL-$SRVID/
 wget http://terraria.org/server/terraria-server-135.zip
 sudo -u $GAMETOINSTALL-$SRVID unzip terraria-server-135.zip
-cd Linux/
+cd /home/$GAMETOINSTALL-$SRVID/Linux/
 echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID mono --server --gc=sgen -O=all TerrariaServer.exe" >> /home/$GAMETOINSTALL-$SRVID/Linux/start.sh
 chmod +x start.sh
 fi
