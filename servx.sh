@@ -298,7 +298,7 @@ cd /home/$GAMETOINSTALL-$SRVID/
 wget http://terraria.org/server/terraria-server-1353.zip
 sudo -u $GAMETOINSTALL-$SRVID unzip terraria-server-1353.zip
 cd /home/$GAMETOINSTALL-$SRVID/1353/Linux/
-echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID mono --server --gc=sgen -O=all TerrariaServer.exe" >> /home/$GAMETOINSTALL-$SRVID/Linux/start.sh
+echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID mono --server --gc=sgen -O=all TerrariaServer.exe" >> /home/$GAMETOINSTALL-$SRVID/1353/Linux/start.sh
 chmod +x start.sh
 fi
 
