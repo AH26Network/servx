@@ -295,8 +295,8 @@ echo Installing Mono ...
 apt-get install mono-complete -y
 echo Downloading Terraria Server ...
 cd /home/$GAMETOINSTALL-$SRVID/
-wget http://terraria.org/server/terraria-server-1321.zip
-sudo -u $GAMETOINSTALL-$SRVID unzip terraria-server-1321.zip
+wget http://terraria.org/server/terraria-server-135.zip
+sudo -u $GAMETOINSTALL-$SRVID unzip terraria-server-135.zip
 cd Dedicated\ Server/Linux/
 echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID mono --server --gc=sgen -O=all TerrariaServer.exe" >> /home/$GAMETOINSTALL-$SRVID/Dedicated\ Server/Linux/start.sh
 chmod +x start.sh
