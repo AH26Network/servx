@@ -315,7 +315,7 @@ echo "Steam Password"
 read STEAMPASSW
 chmod +x steamcmd.sh
 chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
-sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login $USERNAME $STEAMPASSWD +app_update 211820 validate +quit
+sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login $USERNAME $STEAMPASSW +app_update 211820 validate +quit
 echo "Starbound Downloading success"
 cd /home/$GAMETOINSTALL-$SRVID/linux/
 echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID ./starbound_server" >> /home/$GAMETOINSTALL-$SRVID/linux/start.sh
