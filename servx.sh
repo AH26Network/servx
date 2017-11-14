@@ -35,7 +35,7 @@ sleep 1
 
 # - Select Game - 
 echo -e "${GREEN}Current games supported by Servx :"
-echo "Minecraft, Gmod, Dontstarve (80% working), Terraria"
+echo "Minecraft, Gmod, Dontstarve (80% working), Terraria, Starbound"
 echo -e "${NC} "
 sleep 1
 echo "Enter the full name of the game to install without uppercase and spaces : "
