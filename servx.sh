@@ -100,7 +100,7 @@ read MCVS
 	echo "screen -r $GAMETOINSTALL-$SRVID" >> /home/$GAMETOINSTALL-$SRVID/console.sh
 	chmod +x /home/$GAMETOINSTALL-$SRVID/start.sh
 	chmod +x /home/$GAMETOINSTALL-$SRVID/console.sh
-	cd /home/$GAMETOINSTALL-SRVID/
+	cd /home/$GAMETOINSTALL-$SRVID/
 	./start.sh
         exit 2
      wget -O /home/$GAMETOINSTALL-$SRVID/eula.txt https://raw.githubusercontent.com/AH26Network/servx/master/dl/minecraft_eula.txt
