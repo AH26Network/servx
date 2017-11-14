@@ -96,7 +96,7 @@ read MCVS
         echo "Downloading Craftbukkit in $MCVS"
 	wget -O /home/$GAMETOINSTALL-$SRVID/craftbukkit-$MCVS.jar https://s3.amazonaws.com/Minecraft.Download/versions/$MCVS/minecraft_server.$MCVS.jar
 	chmod +x /home/$GAMETOINSTALL-$SRVID/craftbukkit-$MCVS.jar
-	echo screen -h 1024 -dmS $GAMETOINSTALL-$SRVID java -Xms512M -Xmx1024M -jar -XX:ParallelGCThreads=1 craftbukkit-$MCVS.jar >> /home/$GAMETOINSTALL-$SRVID/start.sh
+	echo screen -h 1024 -dmS $GAMETOINSTALL-$SRVID java -Xmx1024M -Xms1024M -jar -XX:ParallelGCThreads=1 minecraft_server.$MCVS.jar nogui >> /home/$GAMETOINSTALL-$SRVID/start.sh
 	echo "screen -r $GAMETOINSTALL-$SRVID" >> /home/$GAMETOINSTALL-$SRVID/console.sh
 	chmod +x /home/$GAMETOINSTALL-$SRVID/start.sh
 	chmod +x /home/$GAMETOINSTALL-$SRVID/console.sh
