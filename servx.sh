@@ -309,9 +309,9 @@ cd /home/$GAMETOINSTALL-$SRVID/
 tar -xzf steamcmd_linux.tar.gz
 echo "Downloading SteamCMD Success"
 echo "Downloading Starbound ..."
-echo "Steam Username"
+echo -e "${GREEN}Steam Username"
 read USERNAME
-echo "Steam Password"
+echo -e "${GREEN}Steam Password"
 read STEAMPASSW
 chmod +x steamcmd.sh
 chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
