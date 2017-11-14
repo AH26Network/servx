@@ -103,6 +103,7 @@ read MCVS
         exit
      cd /home/$GAMETOINSTALL-$SRVID/	
      ./start.sh	
+     sleep 2
      wget -O /home/$GAMETOINSTALL-$SRVID/eula.txt https://raw.githubusercontent.com/AH26Network/servx/master/dl/minecraft_eula.txt
 fi
 
