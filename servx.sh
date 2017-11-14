@@ -101,7 +101,9 @@ read MCVS
 	chmod +x /home/$GAMETOINSTALL-$SRVID/start.sh
 	chmod +x /home/$GAMETOINSTALL-$SRVID/console.sh
         exit
-    wget -O /home/$GAMETOINSTALL-$SRVID/ http://oc018.net/owncloud/public.php?service=files&t=29e73f8ce7c921f079fd36e830bd2b44&download
+     echo "#By changing the setting below to TRUE you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula)." >> /home/$GAMETOINSTALL-SRVID/eula.txt
+     echo "#Fri Aug 19 12:59:31 CEST 2016." >> /home/$GAMETOINSTALL-SRVID/eula.txt
+     echo "eula=true" >> /home/$GAMETOINSTALL-SRVID/eula.txt
 fi
 
 # - GMOD - 
