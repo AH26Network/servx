@@ -302,7 +302,6 @@ echo "screen -x $GAMETOINSTALL-$SRVID" >> /home/$GAMETOINSTALL-$SRVID/console.sh
 chmod 755 console.sh
 chmod +x start.sh
 chmod +x console.sh
-cd /home/$GAMETOINSTALL-SRVID
 fi
 
 # - Starbound - 
