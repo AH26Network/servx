@@ -101,8 +101,8 @@ read MCVS
 	chmod +x /home/$GAMETOINSTALL-$SRVID/start.sh
 	chmod +x /home/$GAMETOINSTALL-$SRVID/console.sh
 	cd /home/$GAMETOINSTALL-SRVID/
-	java -Xmx1024M -Xms1024M -jar -XX:ParallelGCThreads=1 craftbukkit-$MCVS.jar nogui
-        exit 1
+	./start.sh
+        exit 2
      wget -O /home/$GAMETOINSTALL-$SRVID/eula.txt https://raw.githubusercontent.com/AH26Network/servx/master/dl/minecraft_eula.txt
 fi
 
