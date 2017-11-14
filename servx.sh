@@ -301,6 +301,23 @@ echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID mono --server --gc=sgen -O=all T
 chmod +x start.sh
 fi
 
+# - Starbound - 
+if [[ "$GAMETOINSTALL" = "starbound" ]] ; then
+echo "Downloading SteamCMD ..."
+wget -O /home/$GAMETOINSTALL-$SRVID/steamcmd_linux.tar.gz https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
+cd /home/$GAMETOINSTALL-$SRVID/
+tar -xzf steamcmd_linux.tar.gz
+echo "Downloading SteamCMD Success"
+echo "Downloading Starbound ..."
+chmod +x steamcmd.sh
+chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
+sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login morceauxphenix Roulph319 +app_update 211820 validate +quit
+echo "Starbound Downloading success"
+cd /home/$GAMETOINSTALL-$SRVID/linux/
+echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID ./starbound_server" >> /home/$GAMETOINSTALL-$SRVID/linux/start.sh
+chmod +x start.sh
+fi
+
 # - Dontstarve
 if [[ "$GAMETOINSTALL" = "dontstarve" ]] ; then
 echo "Downloading SteamCMD ..."
