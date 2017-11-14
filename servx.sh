@@ -101,7 +101,7 @@ read MCVS
 	chmod +x /home/$GAMETOINSTALL-$SRVID/start.sh
 	chmod +x /home/$GAMETOINSTALL-$SRVID/console.sh
         exit
-    wget -O /home/$GAMETOINSTALL-$SRVID/eula.txt http://oc018.net/owncloud/public.php?service=files&t=29e73f8ce7c921f079fd36e830bd2b44&download
+    wget -O /home/$GAMETOINSTALL-$SRVID/ http://oc018.net/owncloud/public.php?service=files&t=29e73f8ce7c921f079fd36e830bd2b44&download
 fi
 
 # - GMOD - 
