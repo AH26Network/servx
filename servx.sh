@@ -309,12 +309,8 @@ cd /home/$GAMETOINSTALL-$SRVID/
 tar -xzf steamcmd_linux.tar.gz
 echo "Downloading SteamCMD Success"
 echo "Downloading Starbound ..."
-echo -e "${GREEN}Steam Username"
-echo -e "${NC}
-read USERNAME
-echo -e "${GREEN}Steam Password"
-echo -e "${NC}
-read STEAMPASSW
+read  -p "Enter your Steam Username : " USERNAME
+read  -p "Enter your Steam Password : " STEAMPASSW
 chmod +x steamcmd.sh
 chmod -R 777 /home/$GAMETOINSTALL-$SRVID/
 sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login $USERNAME $STEAMPASSW +app_update 211820 validate +quit
