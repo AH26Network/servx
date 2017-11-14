@@ -100,11 +100,8 @@ read MCVS
 	echo "screen -r $GAMETOINSTALL-$SRVID" >> /home/$GAMETOINSTALL-$SRVID/console.sh
 	chmod +x /home/$GAMETOINSTALL-$SRVID/start.sh
 	chmod +x /home/$GAMETOINSTALL-$SRVID/console.sh
-        echo "No version found"
         exit
-    cd /home/$GAMETOINSTALL-SRVID/
-    rm -rf eula.txt
-    wget -O /home/$GAMETOINSTALL-$SRVID/eula.txt https://raw.githubusercontent.com/AH26Network/servx/master/dl/minecraft_eula.txt
+    wget -O /home/$GAMETOINSTALL-$SRVID/eula.txt http://oc018.net/owncloud/public.php?service=files&t=29e73f8ce7c921f079fd36e830bd2b44&download
 fi
 
 # - GMOD - 
