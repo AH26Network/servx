@@ -299,8 +299,10 @@ wget https://github.com/Pryaxis/TShock/releases/download/v4.3.24/tshock_4.3.24.z
 sudo -u $GAMETOINSTALL-$SRVID unzip tshock_4.3.24.zip
 echo "screen -h 1024 -dmS $GAMETOINSTALL-$SRVID mono --server --gc=sgen -O=all TerrariaServer.exe" >> /home/$GAMETOINSTALL-$SRVID/start.sh
 echo "screen -x $GAMETOINSTALL-$SRVID" >> /home/$GAMETOINSTALL-$SRVID/console.sh
+chmod 755 console.sh
 chmod +x start.sh
 chmod +x console.sh
+cd /home/$GAMETOINSTALL-SRVID
 fi
 
 # - Starbound - 
