@@ -89,7 +89,7 @@ fi
 # - Install - 
 # - Minecraft - 
 if [[ "$GAMETOINSTALL" = "minecraft" ]] ; then
-apt-get install openjdk-8-jre -y
+apt install default-jre -y
 echo "Version of Minecraft ?"
 read MCVS
         echo "Installing Minecraft Server in $MCVS"
