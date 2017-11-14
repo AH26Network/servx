@@ -4,7 +4,7 @@
 #
 #  This program is free software developed by Edouard CONNOR & Phenix for AH26
 #
-#  GAMES : Rust:ERR Terraria:ok Gmod:ok Minecraft:ok DonotStarveTogether:ERR(Token not found)
+#  GAMES : Rust:ERR Terraria:ok Gmod:ok Minecraft:ok DonotStarveTogether:ERR(Token not found) Starbound:ok
 
 SERVX_VERSION="1.1.0"
 SERVX_VERSION_DATE="08-Sep-16"
