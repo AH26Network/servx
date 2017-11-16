@@ -118,32 +118,8 @@ echo "Downloading Gmod"
 sudo -u $GAMETOINSTALL-$SRVID ./steamcmd.sh +login anonymous +app_update 4020 validate +quit
 echo "Gmod Downloading success"
 read -p "Number of Slots ?" GMOD_SLOTS
-echo -e "${GREEN}Game Mode suported"
-echo -e "Sandbox; DarkRP; Muder; PropHunt; JailBreak${NC}"
-echo "What Game Mode" 
-read GMOD_GAMEMODE
-if [[ "$GMOD_GAMEMODE" == "darkrp" ]] ; then
-echo "Downloading DarkRP ..."
-wget -O /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/darkrp.zip https://github.com/FPtje/DarkRP/archive/master.zip
-cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/
-unzip darkrp.zip
-echo "DarkRP Downloading success"
-fi
-if [[ "$GMOD_GAMEMODE" == "prophunt" ]] ; then
-echo "Downloading PropHunt ..."
-wget -O /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/prop_hunt.zip http://uk2.strategyinformer.com/v2/download/fcdef8af/garrysmod/prop_hunt.zip
-cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/
-unzip prop_hunt.zip
-echo "PropHunt Downloading Success"
-fi
-if [[ "$GMOD_GAMEMODE" == "murder" ]] ; then
-echo "Downloading Murder ..."
-wget -O /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/murder.zip https://github.com/mechanicalmind/murder/archive/master.zip
-cd /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/GarrysModDS/garrysmod/gamemodes/
-unzip murder.zip
-echo "Murder Downloading Success"  
-fi
-echo screen -h 1024 -dmS $GAMETOINSTALL-$SRVID ./srcds_run -game garrysmod +maxplayers $GMOD_SLOTS +map gm_construct +gamemode $GMOD_GAMEMODE >> /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/GarrysModDS/start.sh
+read -p "Server Name ?" GMOD_SLOTS
+echo screen -h 1024 -dmS $GAMETOINSTALL-$SRVID ./srcds_run -game $GMOD_NAME +maxplayers $GMOD_SLOTS +map gm_construct +gamemode sandbox >> /home/$GAMETOINSTALL-$SRVID/Steam/steamapps/common/GarrysModDS/start.sh
 fi
 
 # - RUST - 
